@@ -1,5 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
-import {Card} from '../card';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Card } from '../card';
 
 @Component({
   selector: 'app-card-detail',
@@ -8,7 +8,12 @@ import {Card} from '../card';
 })
 export class CardDetailComponent implements OnInit {
 
-  @Input() card!:Card;
+  @Input() card!: Card;
+  @Output() isDone = new EventEmitter<boolean>();
+
+  cardDone(done: boolean) {
+    this.isDone.emit(done);
+  }
   constructor() { }
 
   ngOnInit(): void {

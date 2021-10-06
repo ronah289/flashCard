@@ -1,5 +1,4 @@
 <li *ngFor="let oneCard of Cards;let i = index">
   <button (click)='showD(i)'>{{oneCard.title}}</button>
-  <app-card-detail *ngIf='oneCard.showD'[card]='oneCard' ></app-card-detail>
+  <app-card-detail *ngIf='oneCard.showD'[card]='oneCard' (isDone) = 'cardDone($event,i)' ></app-card-detail>
 </li>
-

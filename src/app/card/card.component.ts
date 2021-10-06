@@ -14,6 +14,11 @@ export class CardComponent implements OnInit {
   showD(index:any){
     this.Cards[index].showD = !this.Cards[index].showD;
   }
+  cardDone(isDone: any, index: any){
+    if (isDone) {
+      this.Cards.splice(index,1);
+    }
+  }
 
   constructor() { }
 
