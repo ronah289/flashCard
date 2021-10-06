@@ -1,8 +1,5 @@
 <li *ngFor="let oneCard of Cards;let i = index">
-  {{ oneCard.title }}
-  <!-- <button (click)='showDescription(index)'>Show Description</button> -->
-  <!-- <app-card-detail [card]='oneCard' ></app-card-detail> -->
-  <button (click)='showD(i)'>ShowDescription</button>
+  <button (click)='showD(i)'>{{oneCard.title}}</button>
   <app-card-detail *ngIf='oneCard.showD'[card]='oneCard' ></app-card-detail>
 </li>
 
