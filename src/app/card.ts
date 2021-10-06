@@ -1,6 +1,6 @@
 export class Card {
-    
-    id!:number;
-    title!:string;
-    description!:string;
+    showD!:boolean;
+constructor(public id:number,public title:string,public description:string){
+    this.showD=false;
+}
 }

@@ -8,9 +8,12 @@ import {Card} from '../card';
 })
 export class CardComponent implements OnInit {
   Cards: Card[] = [
-    { id: 1, title: 'card1',description:'card 1 description' },
-    { id: 2, title: 'card2',description:'card 2 description' },
+    new Card(1,'card1','card 1 description'),
+    new Card(2,'card2','card2 description'),
   ];
+  showD(index:any){
+    this.Cards[index].showD = !this.Cards[index].showD;
+  }
 
   constructor() { }
 
